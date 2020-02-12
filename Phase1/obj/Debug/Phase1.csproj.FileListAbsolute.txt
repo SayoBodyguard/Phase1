@@ -1,9 +1,0 @@
-D:\Syllabus Inpres\Programmation en C#\Phase 1\Phase1\Phase1\bin\Debug\Phase1.exe.config
-D:\Syllabus Inpres\Programmation en C#\Phase 1\Phase1\Phase1\bin\Debug\Phase1.exe
-D:\Syllabus Inpres\Programmation en C#\Phase 1\Phase1\Phase1\bin\Debug\Phase1.pdb
-D:\Syllabus Inpres\Programmation en C#\Phase 1\Phase1\Phase1\bin\Debug\MyCartographyObjects.dll
-D:\Syllabus Inpres\Programmation en C#\Phase 1\Phase1\Phase1\bin\Debug\MyCartographyObjects.pdb
-D:\Syllabus Inpres\Programmation en C#\Phase 1\Phase1\Phase1\obj\Debug\Phase1.csprojAssemblyReference.cache
-D:\Syllabus Inpres\Programmation en C#\Phase 1\Phase1\Phase1\obj\Debug\Phase1.csproj.CopyComplete
-D:\Syllabus Inpres\Programmation en C#\Phase 1\Phase1\Phase1\obj\Debug\Phase1.exe
-D:\Syllabus Inpres\Programmation en C#\Phase 1\Phase1\Phase1\obj\Debug\Phase1.pdb
