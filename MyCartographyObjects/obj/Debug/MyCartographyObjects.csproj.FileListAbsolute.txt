@@ -1,0 +1,5 @@
+D:\Syllabus Inpres\Programmation en C#\Phase 1\Phase1\MyCartographyObjects\bin\Debug\MyCartographyObjects.dll
+D:\Syllabus Inpres\Programmation en C#\Phase 1\Phase1\MyCartographyObjects\bin\Debug\MyCartographyObjects.pdb
+D:\Syllabus Inpres\Programmation en C#\Phase 1\Phase1\MyCartographyObjects\obj\Debug\MyCartographyObjects.csprojAssemblyReference.cache
+D:\Syllabus Inpres\Programmation en C#\Phase 1\Phase1\MyCartographyObjects\obj\Debug\MyCartographyObjects.dll
+D:\Syllabus Inpres\Programmation en C#\Phase 1\Phase1\MyCartographyObjects\obj\Debug\MyCartographyObjects.pdb

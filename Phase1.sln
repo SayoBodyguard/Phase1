@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase1", "Phase1\Phase1.csproj", "{2722404E-B78B-44A6-AE20-002AC929C350}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCartographyObjects", "MyCartographyObjects\MyCartographyObjects.csproj", "{09CB0EA8-812C-4140-A4D8-90DCE2954080}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2722404E-B78B-44A6-AE20-002AC929C350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2722404E-B78B-44A6-AE20-002AC929C350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2722404E-B78B-44A6-AE20-002AC929C350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2722404E-B78B-44A6-AE20-002AC929C350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09CB0EA8-812C-4140-A4D8-90DCE2954080}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09CB0EA8-812C-4140-A4D8-90DCE2954080}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09CB0EA8-812C-4140-A4D8-90DCE2954080}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09CB0EA8-812C-4140-A4D8-90DCE2954080}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {741218CE-245E-4D62-93F9-CA9835DF8624}
+	EndGlobalSection
+EndGlobal
