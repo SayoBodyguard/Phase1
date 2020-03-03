@@ -71,6 +71,22 @@ namespace MyCartographyObjects
             if (param!= null)
                 CoordList.Add(param);
         }
+
+        public override bool IsPointClose(double X, double Y, double preci)
+        {
+            foreach(Coordonnees c in CoordList)
+            {
+                //Pour gerer un point (pythagore)
+                double Xdistance = c.longitude - X;
+                double Ydistance = c.latitude - Y;
+                double RealDistance = Math.Pow((Math.Pow(Xdistance, 2) + Math.Pow(Ydistance, 2)), 1d / 2d);
+
+                if (RealDistance < preci)
+                    return true;
+            }
+            return false;
+        }
+
         #endregion
     }
 }

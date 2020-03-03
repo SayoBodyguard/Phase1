@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyCartographyObjects 
+namespace MyCartographyObjects
 {
     public class Coordonnees : CartoObj
     {
@@ -45,6 +45,17 @@ namespace MyCartographyObjects
         public override string ToString()
         {
             return ("(" + longitude.ToString() + "," + latitude.ToString() + ")," + " ID: " + id);
+        }
+
+        public override bool IsPointClose(double X, double Y, double preci)
+        {
+            //Pour gerer un point (pythagore)
+            double Xdistance = longitude - X;
+            double Ydistance = latitude - Y;
+            double RealDistance = Math.Pow((Math.Pow(Xdistance, 2) + Math.Pow(Ydistance, 2)), 1d / 2d);
+
+            return (RealDistance < preci);
+
         }
         #endregion
 

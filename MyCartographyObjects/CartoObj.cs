@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyCartographyObjects
 {
-    public abstract class CartoObj
+    public abstract class CartoObj : IIsPointClose
     {
         #region MEMBERS
         private static int _previousID = 0;
@@ -38,6 +38,8 @@ namespace MyCartographyObjects
         {
             Console.WriteLine(ToString());
         }
+
+        public abstract bool IsPointClose(double X, double Y, double preci);
         #endregion
 
     }

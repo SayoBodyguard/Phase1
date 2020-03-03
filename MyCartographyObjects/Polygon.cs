@@ -65,7 +65,7 @@ namespace MyCartographyObjects
         #region METHODS
         public override string ToString()
         {
-            string result = base.ToString() + "Opacity: " + Opacity + "  Main Color: " + MainColor + "  Second Color: " + SecondColor;
+            string result = "ID: " + base.ToString() + " Opacity: " + Opacity + "  Main Color: " + MainColor + "  Second Color: " + SecondColor;
             result += " \nCoordonées: ";
             foreach(Coordonnees c in CoordList)
                 result += "\n\t[" + c.ToString() + "], ";
@@ -75,9 +75,29 @@ namespace MyCartographyObjects
         public bool Remove(Coordonnees c) => CoordList.Remove(c);
         public override void Draw() => Console.WriteLine(ToString());
 
+        public override bool IsPointClose(double X, double Y, double preci)
+        {
+            double maxX;
+            double   maxY = maxX = -1000000000;
+            //finding max coordonates
+            foreach(Coordonnees c in CoordList)
+            {
+                if (c.longitude > maxX)
+                    maxX = c.longitude;
+                if (c.latitude > maxY)
+                    maxY = c.latitude;
+            }
+            if(maxX > X)
+            {
+                if (maxY > Y)
+                    return true;
+            }
+            return false;
+        }
 
-        
-        
+
+
+
 
         #endregion
 
