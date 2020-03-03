@@ -42,13 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CartoObj.cs" />
-    <Compile Include="IIsPointClose.cs" />
-    <Compile Include="IPointy.cs" />
-    <Compile Include="Polygon.cs" />
-    <Compile Include="Polyline.cs" />
-    <Compile Include="Coordonnees.cs" />
-    <Compile Include="POI.cs" />
+    <Compile Include="Classes\CartoObj.cs" />
+    <Compile Include="Interfaces\IIsPointClose.cs" />
+    <Compile Include="Interfaces\IPointy.cs" />
+    <Compile Include="Classes\Polygon.cs" />
+    <Compile Include="Classes\Polyline.cs" />
+    <Compile Include="Classes\Coordonnees.cs" />
+    <Compile Include="Classes\POI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

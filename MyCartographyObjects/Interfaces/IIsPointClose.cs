@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyCartographyObjects
 {
-    interface IIsPointClose
+    public interface IIsPointClose
     {
         bool IsPointClose(double Xparam, double Yparam, double preci);
     }

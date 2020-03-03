@@ -13,26 +13,40 @@ namespace Phase1
     {
         static void Main(string[] args)
         {
+            #region DECLARATIONS
+            Coordonnees c1 = new Coordonnees();
+            Coordonnees c2 = new Coordonnees(2d,5d);
+
             POI poi1 = new POI();
-            Coordonnees coord = new Coordonnees(22, 4);
-            Polyline poly = new Polyline(Colors.Red, 3);
-            Polygon polyg = new Polygon();
+            POI poi2 = new POI("Second POI",2d,5d);
 
-            poly.Add(coord);
-            poly.Add(new Coordonnees(5, 3));
-            poly.Add(new Coordonnees(8, 4));
-            poly.Add(poi1);
+            Polygon poly1 = new Polygon();
+            Polygon poly2 = new Polygon(0.2, Colors.Red, Colors.Blue, new List<Coordonnees>());
 
-            polyg.Add(coord);
-            polyg.Add(new Coordonnees(5, 3));
-            polyg.Add(new Coordonnees(8, 4));
-            polyg.Add(poi1);
+            Polyline pol1 = new Polyline();
+            Polyline pol2 = new Polyline(Colors.Red, 1);
+            #endregion
+
+            List<CartoObj> carList = new List<CartoObj>();
+            carList.Add(c1);
+            carList.Add(c2);
+            carList.Add(poi1);
+            carList.Add(poi2);
+            carList.Add(poly1);
+            carList.Add(poly2);
+            carList.Add(pol1);
+            carList.Add(pol2);
+
+            foreach (CartoObj c in carList)
+                c.Draw();
+
+            foreach (CartoObj c in carList)
+                if (c is IPointy)
+                    c.Draw();
 
 
-            Console.WriteLine(poi1.ToString());
-            Console.WriteLine(coord.ToString());
-            Console.WriteLine(poly.ToString());
-            Console.WriteLine(polyg.ToString());
+
+            //BLOCKING 
             Console.ReadKey();
         }
     }

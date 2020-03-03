@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyCartographyObjects
 {
-    interface IPointy
+    public interface IPointy
     {
         int PointAmount();
 
