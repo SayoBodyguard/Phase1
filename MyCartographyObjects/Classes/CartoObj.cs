@@ -39,6 +39,8 @@ namespace MyCartographyObjects
             Console.WriteLine(ToString());
         }
 
+        public abstract int PointCount();
+
         public abstract bool IsPointClose(double X, double Y, double preci);
         #endregion
 

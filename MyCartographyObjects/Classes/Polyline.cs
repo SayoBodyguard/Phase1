@@ -7,7 +7,7 @@ using System.Windows.Media;
 
 namespace MyCartographyObjects
 {
-    public class Polyline : CartoObj ,IPointy
+    public class Polyline : CartoObj, IPointy, IComparable<Polyline>, IEquatable<Polyline>
     {
         #region MEMBERS
         private List<Coordonnees> _coordList;
@@ -53,7 +53,7 @@ namespace MyCartographyObjects
         #region METHODS
         public override string ToString()
         {
-            string result = "ID: "+ base.ToString() + "  Color: "+ Color.ToString() + "  Thickness: " + Thickness + "  \nCoordonnées: ";
+            string result = "ID: " + base.ToString() + "  Color: " + Color.ToString() + "  Thickness: " + Thickness + "  \nCoordonnées: ";
 
             foreach (Coordonnees C in CoordList)
             {
@@ -68,13 +68,13 @@ namespace MyCartographyObjects
         }
         public void Add(Coordonnees param)
         {
-            if (param!= null)
+            if (param != null)
                 CoordList.Add(param);
         }
 
         public override bool IsPointClose(double X, double Y, double preci)
         {
-            foreach(Coordonnees c in CoordList)
+            foreach (Coordonnees c in CoordList)
             {
                 //Pour gerer un point (pythagore)
                 double Xdistance = c.longitude - X;
@@ -92,7 +92,7 @@ namespace MyCartographyObjects
         {
             int result = 0;
             List<Coordonnees> temp = new List<Coordonnees>();
-            foreach(Coordonnees c in CoordList)
+            foreach (Coordonnees c in CoordList)
             {
                 if (temp.Contains(c))
                     result++;
@@ -100,6 +100,52 @@ namespace MyCartographyObjects
             }
             return result;
         }
+
+        public double length()
+        {
+            double result = 0;
+            for (int i = 0; i < CoordList.Count() - 1; i++)
+            {
+                result += Math.Sqrt((Math.Pow(CoordList[i].latitude, 2) + Math.Pow(CoordList[i + 1].latitude, 2)));
+            }
+            return result;
+        }
+
+        public int CompareTo(Polyline other)
+        {
+            if (this.length() < other.length())
+                return -1;
+            else
+            {
+                if (this.length() == other.length())
+                    return 0;
+                else
+                    return 1;
+            }
+
+        }
+
+        public bool Equals(Polyline other)
+        {
+            if (Thickness == other.Thickness)
+            {
+                if(CoordList.Count == other.CoordList.Count)
+                {
+                    for(int i = 0; i < CoordList.Count; i++)
+                    {
+                        if(CoordList[i] != other.CoordList[i]) { return false; }
+                    }
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public override int PointCount()
+        {
+            return CoordList.Count();
+        }
+
 
         #endregion
     }

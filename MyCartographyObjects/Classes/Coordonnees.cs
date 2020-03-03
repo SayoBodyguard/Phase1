@@ -44,7 +44,7 @@ namespace MyCartographyObjects
 
         public override string ToString()
         {
-            return ("(" + longitude.ToString() + "," + latitude.ToString() + ")," + " ID: " + id);
+            return ("ID: " + id + " (" + longitude.ToString() + "," + latitude.ToString() + "),");
         }
 
         public override bool IsPointClose(double X, double Y, double preci)
@@ -56,6 +56,11 @@ namespace MyCartographyObjects
 
             return (RealDistance < preci);
 
+        }
+
+        public override int PointCount()
+        {
+            return 1;
         }
         #endregion
 

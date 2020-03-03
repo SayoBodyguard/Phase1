@@ -25,7 +25,7 @@
         #region METHODS
         public override string ToString()
         {
-            return "Desc: " + description + "Coordonnées:  " + base.ToString() +  "  ID:" + id;
+            return "Desc: " + description + " Coordonnées:  " + base.ToString() +  "  ID:" + id;
         }
         #endregion
 

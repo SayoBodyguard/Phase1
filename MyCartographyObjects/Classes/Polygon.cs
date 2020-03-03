@@ -108,6 +108,11 @@ namespace MyCartographyObjects
             return result;
         }
 
+        public override int PointCount()
+        {
+            return CoordList.Count();
+        }
+
 
         #endregion
 
