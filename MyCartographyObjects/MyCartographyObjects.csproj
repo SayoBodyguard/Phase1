@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="CartoObj.cs" />
     <Compile Include="IIsPointClose.cs" />
+    <Compile Include="IPointy.cs" />
     <Compile Include="Polygon.cs" />
     <Compile Include="Polyline.cs" />
     <Compile Include="Coordonnees.cs" />

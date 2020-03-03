@@ -7,7 +7,7 @@ using System.Windows.Media;
 
 namespace MyCartographyObjects
 {
-    public class Polyline : CartoObj
+    public class Polyline : CartoObj ,IPointy
     {
         #region MEMBERS
         private List<Coordonnees> _coordList;
@@ -85,6 +85,20 @@ namespace MyCartographyObjects
                     return true;
             }
             return false;
+        }
+
+
+        public int PointAmount()
+        {
+            int result = 0;
+            List<Coordonnees> temp = new List<Coordonnees>();
+            foreach(Coordonnees c in CoordList)
+            {
+                if (temp.Contains(c))
+                    result++;
+                temp.Add(c);
+            }
+            return result;
         }
 
         #endregion
