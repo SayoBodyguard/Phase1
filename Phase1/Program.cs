@@ -76,7 +76,7 @@ namespace Phase1
             Console.WriteLine("\n\nPolylines Proches...");
             foreach (Polyline p in polylist)
             {
-                if (p.IsPointClose(5, 2, 1)){ p.Draw(); }
+                if (p.IsPointClose(5, 2, 1)) { p.Draw(); }
             }
             Console.WriteLine("\n\nListe de CartoObj");
             carList.Sort(new MyCartoObjCoordComparer());

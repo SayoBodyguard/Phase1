@@ -133,7 +133,7 @@ namespace MyCartographyObjects
                 {
                     for(int i = 0; i < CoordList.Count; i++)
                     {
-                        if(CoordList[i] != other.CoordList[i]) { return false; }
+                        if(!(CoordList[i].Equals( other.CoordList[i]))) { return false; }
                     }
                     return true;
                 }

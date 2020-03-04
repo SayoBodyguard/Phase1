@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyCartographyObjects
 {
-    public class Coordonnees : CartoObj
+    public class Coordonnees : CartoObj , IEquatable<Coordonnees>
     {
         #region VARIABLEMEMBRES
         private double _longitude;
@@ -58,9 +58,15 @@ namespace MyCartographyObjects
 
         }
 
-        public override int PointCount()
+        public override int PointCount() => 1;
+        public bool Equals(Coordonnees obj)
         {
-            return 1;
+            if (latitude == obj.latitude)
+            {
+                if (longitude == obj.longitude)
+                    return true;
+            }
+            return false;
         }
         #endregion
 
