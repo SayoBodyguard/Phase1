@@ -14,6 +14,7 @@ namespace Phase1
         static void Main(string[] args)
         {
             #region DECLARATIONS
+            //DECLARATIONS
             Coordonnees c1 = new Coordonnees();
             Coordonnees c2 = new Coordonnees(2d, 5d);
 
